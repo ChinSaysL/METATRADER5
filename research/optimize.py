@@ -142,12 +142,18 @@ def evaluate_core(task):
         #--- per-fold profit factors, bucketed by trade exit time
         exits = np.array([x.exit_time for x in trades])
         profits = np.array([x.profit for x in trades])
-        fold_pf, fold_net, fold_n = [], [], []
+        #--- each trade as a fraction of the balance it was sized against. Money
+        #--- figures compound along each config's own path, so a config that did
+        #--- well early trades bigger later; returns are comparable across folds.
+        bal_before = tp.initial_balance + np.concatenate(([0.0], np.cumsum(profits)[:-1]))
+        rets = profits / bal_before
+        fold_pf, fold_net, fold_n, fold_ret = [], [], [], []
         for lo, hi in bounds:
             m = (exits >= lo) & (exits <= hi)
             fold_pf.append(pf_of(profits[m]))
             fold_net.append(float(profits[m].sum()))
             fold_n.append(int(m.sum()))
+            fold_ret.append(float(rets[m].sum() * 100.0))
 
         rows.append({
             "sens": sens, "atr": alen,
@@ -157,6 +163,7 @@ def evaluate_core(task):
             "pf": st["profit_factor"], "dd": st["max_drawdown_pct"],
             "win": st["win_rate"],
             "fold_pf": fold_pf, "fold_net": fold_net, "fold_n": fold_n,
+            "fold_ret": fold_ret,
         })
     return rows
 
