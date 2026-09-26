@@ -1,0 +1,59 @@
+data  : MQFULL M15  99999 bars  2022-06-27 04:15 -> 2026-09-25 22:30
+target: +10% before -10%, 0.5% risk, $10,000
+search: 24 engines x 96 configs = 2304, 14 processes
+
+  1/24 engines done (74 configs)
+  2/24 engines done (157 configs)
+  3/24 engines done (240 configs)
+  4/24 engines done (320 configs)
+  5/24 engines done (406 configs)
+  6/24 engines done (478 configs)
+  7/24 engines done (561 configs)
+  8/24 engines done (640 configs)
+  9/24 engines done (732 configs)
+  10/24 engines done (826 configs)
+  11/24 engines done (922 configs)
+  12/24 engines done (1018 configs)
+  13/24 engines done (1114 configs)
+  14/24 engines done (1209 configs)
+  15/24 engines done (1305 configs)
+  16/24 engines done (1401 configs)
+  17/24 engines done (1491 configs)
+  18/24 engines done (1583 configs)
+  19/24 engines done (1656 configs)
+  20/24 engines done (1736 configs)
+  21/24 engines done (1808 configs)
+  22/24 engines done (1848 configs)
+  23/24 engines done (1877 configs)
+  24/24 engines done (1897 configs)
+
+1897 configs evaluated, 126 with ZERO breaches
+
+================================================================================================================
+FASTEST configurations with ZERO breaches
+================================================================================================================
+ sens  atr    filter  ms   sl  ema  htf | trades   /yr     PF    DD% |  pass%  fails  med days     p75
+------------------------------------------------------------------------------------------------------
+ 10.0   10 on:Strong   1  2.5    0    N |    196    46  1.700    9.0 |   100%      0       280     438
+ 10.0   10 on:Strong   1  2.5  200    N |    192    45  1.720    8.5 |   100%      0       280     438
+ 10.0   10 on:Strong   2  2.5    0    N |    196    46  1.700    9.0 |   100%      0       280     438
+ 10.0   10 on:Strong   2  2.5  200    N |    192    45  1.720    8.5 |   100%      0       280     438
+ 12.0    7 on:Strong   1  1.5    0    N |     89    21  1.323    8.8 |   100%      0       287     651
+ 12.0    7 on:Strong   2  1.5    0    N |     89    21  1.323    8.8 |   100%      0       287     651
+ 12.0    7 on:Strong   1  1.5  200    N |     88    21  1.381    8.8 |   100%      0       289     656
+ 12.0    7 on:Strong   2  1.5  200    N |     88    21  1.381    8.8 |   100%      0       289     656
+ 10.0   10       off   2  2.5  200    N |    222    52  1.453    9.0 |   100%      0       292     441
+ 10.0   10  on:Light   2  2.5  200    N |    210    49  1.576    9.0 |   100%      0       292     441
+ 12.0    7 on:Strong   1  2.0    0    N |     89    21  1.530    7.8 |   100%      0       313     680
+ 12.0    7 on:Strong   2  2.0    0    N |     89    21  1.530    7.8 |   100%      0       313     680
+ 10.0   14       off   2  2.5    0    Y |     92    22  1.229    8.3 |   100%      0       314     468
+ 10.0   14       off   2  2.5  200    Y |     92    22  1.229    8.3 |   100%      0       314     468
+ 10.0   14       off   2  3.0    0    Y |     92    22  1.234    6.6 |   100%      0       314     510
+
+NOTHING passes within 120 calendar days without breaching.
+================================================================================================================
+Allowing up to 2 breaches (faster, but you would lose some fees)
+================================================================================================================
+ sens  atr    filter  ms   sl  ema  htf | trades   /yr     PF    DD% |  pass%  fails  med days     p75
+------------------------------------------------------------------------------------------------------
+

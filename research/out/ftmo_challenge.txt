@@ -1,0 +1,40 @@
+data   : XAUUSD M15  14719 bars  2026-01-02 01:00 -> 2026-08-17 16:00
+costs  : spread 0.44 USD/oz, commission 3.0 USD/lot/side
+account: 100,000 USD
+rules  : target +10%, daily loss -5%, total loss -10% (equity based, floating losses counted)
+
+starting a fresh challenge on 78 different days
+
+  risk  starts  passed  failed  ran out |        days to pass (trading days) |  worst DD%
+                                        |      p25   median      p75     max |           
+-----------------------------------------------------------------------------------------
+ 0.50%      78      64       0       14 |       15       22       29      43 |       5.2%
+ 0.75%      78      70       0        8 |        7       14       22      42 |       7.7%
+ 1.00%      78      68       5        5 |        6       10       15      27 |      10.2%
+
+'ran out' = the data ended before the account either passed or breached a limit;
+those are not failures, just unfinished - the sample is only 7.5 months long.
+
+--- risk 0.5% detail
+  of the challenges that finished, 100% passed
+  trading days to target : median 22, p25 15, p75 29, max 43
+  calendar days to target: median 37, p75 47, max 65
+  trades to target       : median 44, max 86
+  hit target within 30 calendar days: 23/64 (36% of passes)
+  breaches: 0 daily-loss, 0 total-loss
+
+--- risk 0.75% detail
+  of the challenges that finished, 100% passed
+  trading days to target : median 14, p25 7, p75 22, max 42
+  calendar days to target: median 22, p75 36, max 63
+  trades to target       : median 25, max 84
+  hit target within 30 calendar days: 49/70 (70% of passes)
+  breaches: 0 daily-loss, 0 total-loss
+
+--- risk 1.0% detail
+  of the challenges that finished, 93% passed
+  trading days to target : median 10, p25 6, p75 15, max 27
+  calendar days to target: median 15, p75 26, max 45
+  trades to target       : median 18, max 50
+  hit target within 30 calendar days: 59/68 (87% of passes)
+  breaches: 4 daily-loss, 1 total-loss

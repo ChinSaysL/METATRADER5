@@ -1,0 +1,85 @@
+data   : MQFULL M15  99999 bars  2022-06-27 04:15 -> 2026-09-25 22:30
+search : 30 engine builds x 120 configs = 3600 evaluations, 14 processes
+folds  : 10 sequential blocks of ~9999 bars
+
+  1/30 engine builds done (31s, 120 configs kept)
+  2/30 engine builds done (32s, 240 configs kept)
+  3/30 engine builds done (32s, 360 configs kept)
+  4/30 engine builds done (43s, 480 configs kept)
+  5/30 engine builds done (43s, 600 configs kept)
+  6/30 engine builds done (44s, 720 configs kept)
+  7/30 engine builds done (62s, 840 configs kept)
+  8/30 engine builds done (64s, 960 configs kept)
+  9/30 engine builds done (68s, 1080 configs kept)
+  10/30 engine builds done (91s, 1200 configs kept)
+  11/30 engine builds done (91s, 1320 configs kept)
+  12/30 engine builds done (97s, 1440 configs kept)
+  13/30 engine builds done (117s, 1525 configs kept)
+  14/30 engine builds done (120s, 1610 configs kept)
+  15/30 engine builds done (152s, 1710 configs kept)
+  16/30 engine builds done (170s, 1790 configs kept)
+  17/30 engine builds done (174s, 1870 configs kept)
+  18/30 engine builds done (188s, 1950 configs kept)
+  19/30 engine builds done (199s, 2030 configs kept)
+  20/30 engine builds done (200s, 2100 configs kept)
+  21/30 engine builds done (215s, 2155 configs kept)
+  22/30 engine builds done (223s, 2195 configs kept)
+  23/30 engine builds done (225s, 2235 configs kept)
+  24/30 engine builds done (242s, 2275 configs kept)
+  25/30 engine builds done (251s, 2305 configs kept)
+  26/30 engine builds done (253s, 2325 configs kept)
+  27/30 engine builds done (265s, 2345 configs kept)
+  28/30 engine builds done (276s, 2365 configs kept)
+  29/30 engine builds done (291s, 2385 configs kept)
+  30/30 engine builds done (302s, 2405 configs kept)
+
+2405 configs with >= 150 trades, 302s total
+
+======================================================================================================================
+MOST CONSISTENT CONFIGS  (ranked by folds profitable, then median fold PF)
+======================================================================================================================
+configuration                                                  trades      net     PF    DD%  winFolds  medPF  minPF
+--------------------------------------------------------------------------------------------------------------------
+sens  7.0  atr  7  filt on:Strong  minstr 1  sl 1.5  ema 200  htf N    496    4,871  1.169   35.9    8/10     1.15   0.36
+sens  7.0  atr  7  filt on:Strong  minstr 2  sl 1.5  ema 200  htf N    496    4,871  1.169   35.9    8/10     1.15   0.36
+sens 12.0  atr 10  filt       off  minstr 1  sl 2.5  ema   0  htf Y    197    1,347  1.130   12.1    8/10     1.14   0.68
+sens  9.0  atr 14  filt  on:Light  minstr 2  sl 2.0  ema 200  htf Y    158    1,667  1.196   22.7    7/10     1.57   0.24
+sens  9.0  atr 14  filt  on:Light  minstr 2  sl 2.0  ema   0  htf Y    161    1,353  1.156   23.4    7/10     1.52   0.24
+sens 11.0  atr 10  filt       off  minstr 1  sl 4.0  ema 200  htf Y    233    1,741  1.199   14.1    7/10     1.46   0.25
+sens 11.0  atr 10  filt       off  minstr 1  sl 4.0  ema   0  htf Y    235    1,774  1.200   13.4    7/10     1.45   0.36
+sens 11.0  atr 10  filt  on:Light  minstr 1  sl 4.0  ema   0  htf Y    199    2,044  1.271   10.9    7/10     1.42   0.41
+sens 11.0  atr 10  filt  on:Light  minstr 1  sl 4.0  ema 200  htf Y    197    1,783  1.239   12.2    7/10     1.42   0.29
+sens 11.0  atr 10  filt       off  minstr 1  sl 3.0  ema 200  htf Y    233    1,932  1.182   14.6    7/10     1.33   0.30
+sens  9.0  atr 10  filt  on:Light  minstr 1  sl 4.0  ema 200  htf Y    281    1,335  1.136   17.2    7/10     1.33   0.25
+sens  8.0  atr  7  filt  on:Light  minstr 1  sl 2.0  ema 200  htf Y    353    1,270  1.072   27.3    7/10     1.31   0.33
+sens 11.0  atr 10  filt       off  minstr 1  sl 3.0  ema   0  htf Y    235    2,101  1.195   13.4    7/10     1.30   0.42
+sens 12.0  atr  7  filt  on:Light  minstr 1  sl 2.0  ema   0  htf Y    183    3,234  1.289   12.8    7/10     1.29   0.23
+sens 12.0  atr  7  filt  on:Light  minstr 1  sl 2.0  ema 200  htf Y    183    3,234  1.289   12.8    7/10     1.29   0.23
+sens  8.0  atr 10  filt  on:Light  minstr 2  sl 2.5  ema   0  htf N    482    2,101  1.090   32.6    7/10     1.29   0.47
+sens  8.0  atr  7  filt  on:Light  minstr 1  sl 1.5  ema   0  htf Y    372    3,845  1.165   30.4    7/10     1.29   0.40
+sens  8.0  atr  7  filt  on:Light  minstr 1  sl 1.5  ema 200  htf Y    353    3,870  1.167   28.0    7/10     1.28   0.40
+sens 12.0  atr  7  filt       off  minstr 1  sl 2.0  ema   0  htf Y    221    3,246  1.237   14.5    7/10     1.27   0.21
+sens 10.0  atr  7  filt  on:Light  minstr 2  sl 4.0  ema 200  htf N    214    1,971  1.229    8.6    7/10     1.27   0.48
+
+currently shipped config ranks #929 of 2405:
+sens  5.0  atr 10  filt on:Strong  minstr 1  sl 1.5  ema 200  htf Y    610    1,324  1.056   44.2    5/10     0.96   0.38
+
+======================================================================================================================
+ANCHORED WALK-FORWARD  (choose on folds 1..i by profit factor, measure on fold i+1)
+======================================================================================================================
+test fold  chosen configuration                                            trades       net      PF
+----------------------------------------------------------------------------------------------------
+3          sens 14.0  atr 10  filt  on:Light  minstr 1  sl 1.5  ema 200  htf N      37    -2,940    0.20
+4          sens 10.0  atr  7  filt  on:Light  minstr 2  sl 1.5  ema 200  htf N      16      -212    0.87
+5          sens 10.0  atr  7  filt  on:Light  minstr 2  sl 1.5  ema 200  htf N      21      -284    0.86
+6          sens 10.0  atr 14  filt  on:Light  minstr 1  sl 2.5  ema 200  htf Y      23    -1,528    0.33
+7          sens 10.0  atr  7  filt  on:Light  minstr 2  sl 1.5  ema 200  htf N      19     6,527    5.42
+8          sens 10.0  atr  7  filt  on:Light  minstr 2  sl 1.5  ema 200  htf N      33      -434    0.89
+9          sens 10.0  atr  7  filt  on:Light  minstr 2  sl 1.5  ema 200  htf N      18    -1,567    0.32
+10         sens 10.0  atr  7  filt  on:Light  minstr 2  sl 1.5  ema 200  htf N      14      -193    0.86
+----------------------------------------------------------------------------------------------------
+TOTAL                                                                                  -630
+
+walk-forward folds profitable: 1/8
+This is the number to believe: it is what re-picking parameters as you go
+would actually have produced, with no hindsight.

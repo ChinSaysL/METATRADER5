@@ -1,0 +1,114 @@
+==============================================================================
+XAUUSD M15   14719 bars  2026-01-02 01:00 -> 2026-08-17 16:00
+costs: spread 0.44 USD/oz, commission 0.0 USD/lot/side, 1% risk per trade
+==============================================================================
+
+--- pine defaults (filter off, reversal exit on)
+  trades          559
+  net profit          5,305.23  (53.1%)
+  profit factor          1.190
+  expectancy              9.49 per trade
+  win rate                33.3%
+  avg win / loss        178.81 / -74.94
+  max drawdown        2,273.22  (15.0%)
+  final balance      15,305.23
+  avg bars held            8.4
+  exits           {'stop': 338, 'reversal': 219, 'reverse': 1, 'end': 1}
+  +1 bar delay    net         455  PF 1.021   (gradual decay = no lookahead)
+
+--- RECOMMENDED: chop filter Strong, SL 1.5xATR, reversal exit off
+  trades          259
+  net profit         12,083.99  (120.8%)
+  profit factor          1.656
+  expectancy             46.66 per trade
+  win rate                34.7%
+  avg win / loss        339.03 / -109.04
+  max drawdown        1,822.60  (9.2%)
+  final balance      22,083.99
+  avg bars held           15.1
+  exits           {'stop': 259}
+  +1 bar delay    net       3,505  PF 1.238   (gradual decay = no lookahead)
+
+--- lower drawdown: same but SL 2.5xATR
+  trades          258
+  net profit          5,929.02  (59.3%)
+  profit factor          1.542
+  expectancy             22.98 per trade
+  win rate                38.4%
+  avg win / loss        170.32 / -68.76
+  max drawdown          720.25  (6.3%)
+  final balance      15,929.02
+  avg bars held           19.1
+  exits           {'stop': 257, 'reverse': 1}
+  +1 bar delay    net       4,759  PF 1.477   (gradual decay = no lookahead)
+
+--- no filter at all, reversal exit off (raw signal + stops)
+  trades          559
+  net profit         11,722.38  (117.2%)
+  profit factor          1.275
+  expectancy             20.97 per trade
+  win rate                31.3%
+  avg win / loss        310.50 / -110.98
+  max drawdown        3,541.41  (17.9%)
+  final balance      21,722.38
+  avg bars held           14.2
+  exits           {'stop': 557, 'reverse': 1, 'end': 1}
+  +1 bar delay    net         555  PF 1.020   (gradual decay = no lookahead)
+
+==============================================================================
+XAUUSD M5   43686 bars  2026-01-02 01:05 -> 2026-08-17 16:10
+costs: spread 0.44 USD/oz, commission 0.0 USD/lot/side, 1% risk per trade
+==============================================================================
+
+--- pine defaults (filter off, reversal exit on)
+  trades          1844
+  net profit         -2,883.35  (-28.8%)
+  profit factor          0.957
+  expectancy             -1.56 per trade
+  win rate                32.1%
+  avg win / loss        109.49 / -54.08
+  max drawdown        4,969.71  (49.2%)
+  final balance       7,116.65
+  avg bars held            8.5
+  exits           {'stop': 1148, 'reversal': 695, 'reverse': 1}
+  +1 bar delay    net      -3,570  PF 0.947   (gradual decay = no lookahead)
+
+--- RECOMMENDED: chop filter Strong, SL 1.5xATR, reversal exit off
+  trades          753
+  net profit           -859.01  (-8.6%)
+  profit factor          0.983
+  expectancy             -1.14 per trade
+  win rate                28.4%
+  avg win / loss        226.89 / -91.68
+  max drawdown        8,430.70  (49.3%)
+  final balance       9,140.99
+  avg bars held           14.0
+  exits           {'stop': 753}
+  +1 bar delay    net      -4,874  PF 0.864   (gradual decay = no lookahead)
+
+--- lower drawdown: same but SL 2.5xATR
+  trades          753
+  net profit         -2,991.05  (-29.9%)
+  profit factor          0.898
+  expectancy             -3.97 per trade
+  win rate                30.9%
+  avg win / loss        113.57 / -56.64
+  max drawdown        6,404.16  (47.7%)
+  final balance       7,008.95
+  avg bars held           16.9
+  exits           {'stop': 753}
+  +1 bar delay    net      -2,002  PF 0.932   (gradual decay = no lookahead)
+
+--- no filter at all, reversal exit off (raw signal + stops)
+  trades          1844
+  net profit         -1,977.23  (-19.8%)
+  profit factor          0.977
+  expectancy             -1.07 per trade
+  win rate                29.3%
+  avg win / loss        153.37 / -65.20
+  max drawdown        6,960.61  (56.9%)
+  final balance       8,022.77
+  avg bars held           13.5
+  exits           {'stop': 1842, 'reverse': 2}
+  +1 bar delay    net      -4,686  PF 0.930   (gradual decay = no lookahead)
+

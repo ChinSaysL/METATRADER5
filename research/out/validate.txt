@@ -1,0 +1,70 @@
+data: MQGOLD M15  65000 bars  2023-12-15 22:45 -> 2026-09-25 22:45
+
+building 8 engine cores on 14 processes...
+  built engine 6/10 M15 (1/8)
+  built engine 8/10 M15 (2/8)
+  built engine 10/7 M15 (3/8)
+  built engine 10/20 M15 (4/8)
+  built engine 10/10 M15 (5/8)
+  built engine 10/14 M15 (6/8)
+  built engine 12/10 M15 (7/8)
+  built engine 16/10 M15 (8/8)
+
+========================================================================================================
+1. PLATEAU CHECK - vary one parameter at a time around the candidate
+========================================================================================================
+variation                                 trades      net      PF     DD%  folds+
+--------------------------------------------------------------------------------------------------------
+CANDIDATE                                    138    5,586   1.686     9.6     8/8
+
+  sensitivity 6.0                            574    1,735   1.080    18.9     5/8
+  sensitivity 8.0                            250    4,120   1.285    11.0     5/8
+  sensitivity 10.0                           138    5,586   1.686     9.6     8/8
+  sensitivity 12.0                   atr length 14                              141      446   1.056    11.8     4/8
+  atr length 20                              133     -716   0.901    16.5     3/8
+
+  SL 1.0 x ATR                               138    3,670   1.376    18.1     5/8
+  SL 1.5 x ATR                               138    2,907   1.327    10.6     5/8
+  SL 2.0 x ATR                               138    2,192   1.268    10.7     4/8
+  SL 2.5 x ATR                               138    5,586   1.686     9.6     8/8
+  SL 3.0 x ATR                               138    4,928   1.697     9.3     6/8
+  SL 4.0 x ATR                               138    3,145   1.567     6.6     6/8
+
+  chop filter off                            143    5,097   1.603    10.4     7/8
+  chop filter Light                          138    5,586   1.686     9.6     8/8
+  chop filter Medium                         135    5,888   1.735     9.5     7/8
+  chop filter Strong                         127    5,506   1.729     8.2     7/8
+
+  min signal strength 1                      328    2,868   1.159    14.2     6/8
+  min signal strength 2                      138    5,586   1.686     9.6     8/8
+  min signal strength 3                      112    4,959   1.799     7.5     6/8
+
+  trend EMA off                              145    5,130   1.603     9.7     8/8
+  trend EMA 100                              145    5,130   1.603     9.7     8/8
+  trend EMA 200                              138    5,586   1.686     9.6     8/8
+  + H1 agreement                              62    2,652   1.779     8.4     5/8
+
+========================================================================================================
+2. BOOTSTRAP  (5,000 resamples, 0.75% risk)
+========================================================================================================
+  observed net 5,586   observed DD 9.6%
+  median net   5,474   5th pct net 884
+  median DD    9.7%   95th pct DD 17.0%
+  probability of an overall loss: 2.2%
+
+  fold-by-fold (each ~4 months):
+    fold 1:   20 trades  net    1,099  PF  2.13
+    fold 2:   13 trades  net      845  PF  2.42
+    fold 3:   24 trades  net       75  PF  1.05
+    fold 4:   14 trades  net      293  PF  1.33
+    fold 5:   24 trades  net    2,586  PF  3.27
+    fold 6:   23 trades  net       23  PF  1.01
+    fold 7:    6 trades  net      363  PF  2.28
+    fold 8:   14 trades  net      302  PF  1.30
+.42
+    fold 3:   24 trades  net       75  PF  1.05
+    fold 4:   14 trades  net      293  PF  1.33
+    fold 5:   24 trades  net    2,586  PF  3.27
+    fold 6:   23 trades  net       23  PF  1.01
+    fold 7:    6 trades  net      363  PF  2.28
+    fold 8:   14 trades  net      302  PF  1.30

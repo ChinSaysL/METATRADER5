@@ -1,0 +1,42 @@
+data   : XAUUSD M15  14719 bars  2026-01-02 01:00 -> 2026-08-17 16:00
+costs  : spread 0.44 USD/oz, commission 3.0 USD/lot/side
+account: 100,000 USD
+filter : EMA200 trend regime
+rules  : target +10%, daily loss -5%, total loss -10% (equity based, floating losses counted)
+
+starting a fresh challenge on 78 different days
+
+  risk  starts  passed  failed  ran out |        days to pass (trading days) |  worst DD%
+                                        |      p25   median      p75     max |           
+-----------------------------------------------------------------------------------------
+ 0.50%      78      65       0       13 |       15       19       26      37 |       3.8%
+ 0.75%      78      74       0        4 |        8       14       20      32 |       5.7%
+ 1.00%      78      74       0        4 |        6       12       17      31 |       7.6%
+ 1.50%      78      65       9        4 |        3        6       12      22 |      11.0%
+
+'ran out' = the data ended before the account either passed or breached a limit;
+those are not failures, just unfinished - the sample is only 7.5 months long.
+
+--- risk 0.5% detail
+  of the challenges that finished, 100% passed
+  trading days to target : median 19, p25 15, p75 26, max 37
+  calendar days to target: median 38, p75 54, max 80
+  trades to target       : median 26, max 46
+  hit target within 30 calendar days: 21/65 (32% of passes)
+  breaches: 0 daily-loss, 0 total-loss
+
+--- risk 0.75% detail
+  of the challenges that finished, 100% passed
+  trading days to target : median 14, p25 8, p75 20, max 32
+  calendar days to target: median 28, p75 40, max 68
+  trades to target       : median 19, max 43
+  hit target within 30 calendar days: 45/74 (61% of passes)
+  breaches: 0 daily-loss, 0 total-loss
+
+--- risk 1.0% detail
+  of the challenges that finished, 100% passed
+  trading days to target : median 12, p25 6, p75 17, max 31
+  calendar days to target: median 21, p75 32, max 62
+  trades to target       : median 14, max 39
+  hit target within 30 calendar days: 51/74 (69% of passes)
+  breaches: 0 daily-loss, 0 total-loss
